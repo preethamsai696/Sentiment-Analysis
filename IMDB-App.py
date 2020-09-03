@@ -21,7 +21,7 @@ sentence = st.text_input(" Write your review here : ")
 
 v = TfidfVectorizer(decode_error='replace', encoding='utf-8')
 x1 = v.fit_transform(x2.values.astype('U'))
-y1 = v.fit_transform(y2.values.astype('U'))
+y1 = v.transform(y2.values.astype('U'))
 
 model1 = MultinomialNB()
 model1.fit(x1,y1)
