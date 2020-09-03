@@ -20,6 +20,7 @@ sentence = st.text_input(" Write your review here : ")
 
 v = TfidfVectorizer(decode_error='replace', encoding='utf-8')
 x1 =  v.fit_transform(x2.values.astype('U'))
+x1 = np.nan_to_num(x1)
 
 model1 = MultinomialNB()
 model1.fit(x1,y1)
