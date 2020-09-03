@@ -18,7 +18,7 @@ y1  =data.iloc[:,1].values
 
 sentence = st.text_input(" Write your review here : ")
 
-v = TfidfVectorizer(decode_error='replace', encoding='utf-8')
+v = TfidfVectorizer()
 x1 =  v.fit_transform(x2.values.astype('U'))
 x1 = np.nan_to_num(x1)
 
