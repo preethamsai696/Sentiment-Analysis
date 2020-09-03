@@ -10,7 +10,7 @@ st.subheader(" IMDB Review DataSet ")
 st.write(" Classifier: NaiveBayes")
 st.write(" Accuracy: 0.87 ")
 
-data = pd.read_csv('https://drive.google.com/file/d/1SJPMM11AcA9D0fudo_VpzX9P8NxwYqP9/view?usp=sharing.csv',usecols=['review','sentiment'])
+data = pd.read_csv('https://drive.google.com/file/d/1SJPMM11AcA9D0fudo_VpzX9P8NxwYqP9/view?usp=sharing.csv')
 
 x1 = data.iloc[:,0].values
 y1  =data['sentiment'].values
