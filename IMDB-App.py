@@ -12,13 +12,12 @@ st.write(" Accuracy: 0.87 ")
 
 data = pd.read_csv('https://drive.google.com/file/d/1SJPMM11AcA9D0fudo_VpzX9P8NxwYqP9/view?usp=sharing.csv',header=None,error_bad_lines=False)
 
-x1 = v.fit_transform(df['review'].values.astype('U'))
 x1 = data.iloc[:,0].values
 y1  =data.iloc[:,1].values
 
 sentence = st.text_input(" Write your review here : ")
 
-model1 = Pipeline([('tfidf',TfidfVectorizer()),('model',MultinomialNB())])
+model1 = Pipeline([('tfidf',TfidfVectorizer(decode_error='replace', encoding='utf-8')),('model',MultinomialNB())])
 model1.fit(x1,y1)
 
 if sentence:
