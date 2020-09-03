@@ -12,6 +12,7 @@ st.write(" Accuracy: 0.87 ")
 
 data = pd.read_csv('https://drive.google.com/file/d/1SJPMM11AcA9D0fudo_VpzX9P8NxwYqP9/view?usp=sharing.csv',header=None,error_bad_lines=False)
 
+x1 = v.fit_transform(df['review'].values.astype('U'))
 x1 = data.iloc[:,0].values
 y1  =data.iloc[:,1].values
 
