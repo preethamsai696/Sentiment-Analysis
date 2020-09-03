@@ -22,7 +22,7 @@ v = TfidfVectorizer(decode_error='replace', encoding='utf-8')
 x1 =  v.fit_transform(x2.values.astype('U'))
 
 model1 = MultinomialNB()
-model.fit(x1,y1)
+model1.fit(x1,y1)
 
 if sentence:
   y_pred = model1.predict([sentence])
