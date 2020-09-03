@@ -19,7 +19,8 @@ y1  =data.iloc[:,1].values
 sentence = st.text_input(" Write your review here : ")
 
 v = TfidfVectorizer(decode_error='replace', encoding='utf-8')
-x1 =  v.fit_transform(x1)
+x1 = v.fit_transform(x2.values.astype('U'))
+y1 = v.transform(y1)
 
 model1 = MultinomialNB()
 model1.fit(x1,y1)
