@@ -13,7 +13,7 @@ st.write(" Accuracy: 0.87 ")
 data = pd.read_csv('https://drive.google.com/file/d/1SJPMM11AcA9D0fudo_VpzX9P8NxwYqP9/view?usp=sharing.csv',header=None,error_bad_lines=False)
 
 x2 = data.iloc[:,0]
-if x2[x2.isnull() == True]:
+if x2[x2.empty() == True]:
   x2.fillna(method = 'ffill', inplace = True)
 
 x1 = data.iloc[:,0].values
