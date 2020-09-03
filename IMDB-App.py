@@ -17,8 +17,11 @@ y1  =data.iloc[:,1].values
 
 sentence = st.text_input(" Write your review here : ")
 
-model1 = Pipeline([('tfidf',TfidfVectorizer(decode_error='replace', encoding='utf-8')),('model',MultinomialNB())])
-model1.fit(x1,y1)
+v = TfidfVectorizer(decode_error='replace', encoding='utf-8')
+x1 =  v.fit_transform(data['review'].values.astype('U'))
+
+model1 = MultinomialNB()
+model.fit(x1,y1)
 
 if sentence:
   y_pred = model1.predict([sentence])
