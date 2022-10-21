@@ -1,7 +1,7 @@
 
 # Sentiment Analysis
 
-This is a basic Natural Langugage Processing project which talks about classification of movie reviews.
+This is a basic Natural Language Processing project which talks about classification of movie reviews.
 
 
 ## Aim
